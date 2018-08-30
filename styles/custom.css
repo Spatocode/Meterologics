@@ -58,3 +58,8 @@ h2{
     font-size: 28px;
     color: rgb(250, 179, 211);
 }
+.btn{
+    width: 65px;
+    border-radius: 3px;
+    background-color: cadetblue;
+}
