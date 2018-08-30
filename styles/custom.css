@@ -63,3 +63,35 @@ h2{
     border-radius: 3px;
     background-color: cadetblue;
 }
+@media screen and (max-width: 333px) {
+    h1{
+        font-size: 18px !important;
+    }
+    h2{
+        font-size: 17px !important;
+    }
+    .weather-data{
+        font-size: 16px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .init{
+        font-size: 17px !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 22px;
+    }
+    h2{
+        font-size: 21px;
+    }
+    .weather-data{
+        font-size: 18px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .init{
+        font-size: 21px;
+    }
+}

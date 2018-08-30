@@ -1,3 +1,4 @@
+const head = document.querySelector('h2')
 const input = document.querySelector('.zip')
 const main = document.querySelector('.main')
 const desc = document.querySelector('.description')
@@ -23,6 +24,8 @@ function fetchForecast(code) {
         desc.innerHTML = data.weather[0].description
         temp.innerHTML = `${data.main.temp}°F`
         hum.innerHTML = `${data.main.humidity}%`
+        head.innerHTML = `Current weather for ${code}`
+        input.value = ""
       })
       .catch(error => {
         console.error(error);
