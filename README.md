@@ -1,7 +1,8 @@
-# Meterologics
+# METEROLOGICS
 Web application for checking the weather forecast.
 
-#HOW TO USE
+
+# HOW TO USE 
 It's simple to use.
 
 * Clone the repository
