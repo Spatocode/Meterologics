@@ -6,31 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meterologics</title>
     <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav></nav>
-    <header>
-        <h1>METEROLOGICS</h1>
-        <!--<nav>
-            <ul>
-                <li>CURRENT</li>
-                <li>FORECAST</li>
-            </ul>
-        </nav>-->
-    </header>
-    <div class="app-wrapper">
-        <div class="head-wrapper">
-            <h2></h2>
+    <div class="app">
+        <header>
+            <h1>METEROLOGICS</h1>
+            <span class="user"><i class="fa fa-user">kjhg</i></span>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="initial">
+            <div class="intro">
+                <h2>Always be in touch with the weather condition.</h2>
+                <h2>Type your name to get started.</h2>
+            </div>
+            <form>
+                <input type="text" placeholder="Enter your name" class="get-started">
+                <span class="input-error"></span>
+                <button>Get started</button>
+            </form>
         </div>
-        <div class="weather-data">
-            <p class="main"></p>
-            <p class="description"></p>
-            <p class="temperature"></p>
-            <p class="humidity"></p>
-        </div>
-        <div class="init">
-            <label for="zip">Enter zip code</label><br>
-            <input type="text" class="zip" >
+        <div class="app-wrapper">
+            <div class="head-wrapper">
+                <h2 class="app-head"></h2>
+            </div>
+            <div class="weather-data">
+                <p class="error"></p>
+                <p class="main"></p>
+                <p class="description"></p>
+                <p class="temperature"></p>
+                <p class="humidity"></p>
+            </div>
+            <div class="init">
+                <label for="zip">Enter zip code</label><br>
+                <input type="text" class="zip" >
+            </div>
         </div>
     </div>
     <script src="scripts/forecast.js"></script>
