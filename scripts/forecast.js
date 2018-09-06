@@ -4,8 +4,30 @@ const main = document.querySelector('.main')
 const desc = document.querySelector('.description')
 const temp = document.querySelector('.temperature')
 const hum = document.querySelector('.humidity')
+const err = document.querySelector('.error')
+const form = document.querySelector('form')
+const start = document.querySelector('.get-started')
+const user = document.querySelector('.fa')
+const userCon = document.querySelector('span')
+const initial = document.querySelector('.initial')
+const app = document.querySelector('.app-wrapper')
+const inputError = document.querySelector('.input-error')
 const WEATHER_API_KEY = "bbeb34ebf60ad50f7893e7440a1e2b0b";
 const API_STEM = "http://api.openweathermap.org/data/2.5/weather?";
+
+form.addEventListener('submit', (e) =>{
+    e.preventDefault()
+    if(start.value !== ""){
+    let name = start.value
+    user.innerHTML = name
+    userCon.style.display = 'block'
+    initial.style.display = 'none'
+    app.style.display = 'block'
+    }
+    else{
+        inputError.innerHTML = "Please provide a name"
+    }
+})
 
 input.addEventListener('change',()=>{
     let zip = input.value
@@ -29,6 +51,6 @@ function fetchForecast(code) {
       })
       .catch(error => {
         console.error(error);
+        err.innerHTML = error
       });
   }
-  23401
