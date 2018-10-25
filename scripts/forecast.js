@@ -42,6 +42,7 @@ function fetchForecast(code) {
     return fetch(zipUrl(code))
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         main.innerHTML = data.weather[0].main
         desc.innerHTML = data.weather[0].description
         temp.innerHTML = `${data.main.temp}°F`
@@ -51,6 +52,6 @@ function fetchForecast(code) {
       })
       .catch(error => {
         console.error(error);
-        err.innerHTML = error
+        err.innerHTML = "Failed to fetch!<br>Please check your network connection and try again."
       });
   }
